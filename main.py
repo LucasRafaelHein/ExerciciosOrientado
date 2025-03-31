@@ -136,7 +136,24 @@ class Exercicios():
         self.result_number = value_sale
         return self.result_number
     
-    #Fim, não vai ter Bônus. 
-    
+    def exercise_eighteen(self, entry, exit, temp):
+        if entry == "C" and exit == "F":
+            result = (temp * 9/5) + 32
+        elif entry == "C" and exit == "K":
+            result = temp + 273.15
+        elif entry == "F" and exit == "C":
+            result = (temp - 32) * 5/9
+        elif entry == "F" and exit == "K":
+            result = (temp - 32) * 5/9 + 273.15
+        elif entry == "K" and exit == "C":
+            result = temp - 273.15
+        elif entry == "K" and exit == "F":
+            result = (temp - 273.15) * 9/5 + 32
+        else:
+            result = temp
+        
+        self.result_number = result
+        return self.result_number
+        
 teste = Exercicios()
-print(teste.exercise_seventeen(100))
+print(teste.exercise_eighteen("K", "C", 15))
