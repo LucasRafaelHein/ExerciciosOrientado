@@ -66,9 +66,17 @@ class Exercicios():
         return self.result_number, self.result_secundary_number
     
     def exercise_ten(self, valor):
-        return 'Você digitou um numero negativo' if value < 0 else 'Você digitou um número positivo'
+        return 'Você digitou um numero negativo' if valor < 0 else 'Você digitou um número positivo'
     
-    def exercise_eleven(self, )
+    def exercise_eleven(self, valor):
+        if valor == 0:
+            return "Você escreveu 0"
+        elif valor > 1:
+            return "Você escreveu um número positivo"
+        else:
+            return "Você escreveu um número negativo"
+    
+        
 
     
 
@@ -90,4 +98,3 @@ teste = Exercicios()
 #print(teste.exercise_seven(15))
 # 8
 #print(teste.exercise_eight(15))
-#9
