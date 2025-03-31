@@ -76,25 +76,67 @@ class Exercicios():
         else:
             return "Você escreveu um número negativo"
     
+    def exercise_twelve(self, note_1, note_2, note_3):
+        result = (note_1 + note_2 + note_3) / 3
+        if result >= 7:
+            self.result_string = "APROVADO"
+        elif result >= 5 and result < 7:
+            self.result_string = "RECUPERAÇÃO"
+        else:
+            self.result_string = "REPROVADO"
         
-
+        self.result_number = result
+        return self.result_number, self.result_string
     
+    def exercise_thirteen(self, valor):
+        if valor % 2 == 0:
+            return "Par"
+        else:
+            return "Ímpar"
+    
+    def exercise_fourteen(self, number_1, number_2, number_3):
+        if number_1 >= number_2 and number_1 >= number_3:
+            self.result_number = number_1
+        elif number_2 >= number_1 and number_2 >= number_3:
+            self.result_number = number_2
+        else:
+            self.result_number = number_3
+        
+        return self.result_number
 
+    def exercise_fifteen(self, idade):
+        if idade >= 65:
+            return "Idoso"
+        elif idade >= 21:
+            return "Adulto"
+        elif idade >= 14:
+            return "Juvenil"
+        elif idade >= 9:
+            return "Infantil"
+        else:
+            return "Mirim"
+        
+    def exercise_sixteen(self, number_1, number_2):
+        soma = number_1 + number_2
+        if soma > 20:
+            result = soma + 8
+        else:
+            result = soma - 5
+        self.result_number = result
+        return self.result_number
+    
+    def exercise_seventeen(self, value_buy):
 
+        if value_buy < 20.00:
+            result = 0.45
+        else:
+            result = 0.30
+
+        value_sale = value_buy * (1 + result)
+        self.result_number = value_sale
+        return self.result_number
+    
+    #Fim, não vai ter Bônus. 
+    
 teste = Exercicios()
-# 1
-#print(teste.exercise_one(3, 4, 3))
-# 2
-#print(teste.exercise_two(1))
-# 3
-#print(teste.exercise_three(10))
-# 4
-#print(teste.exercise_four(100))
-# 5
-#print(teste.exercise_five(100))
-# 6
-#print(teste.exercise_six(15))
-# 7
-#print(teste.exercise_seven(15))
-# 8
-#print(teste.exercise_eight(15))
+print(teste.exercise_seventeen(100))
