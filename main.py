@@ -154,6 +154,29 @@ class Exercicios():
         
         self.result_number = result
         return self.result_number
+    
+    def exercise_nineteen(self, pedra, papel, tesoura):
+
+        options = [pedra, papel, tesoura]
         
+        player1 = input(f"Escolha {pedra}, {papel} ou {tesoura}: ").lower()
+        player2 = input(f"Escolha {pedra}, {papel} ou {tesoura}: ").lower()
+
+        if player1 not in options or player2 not in options:
+            print("Escolha inválida!")
+            return
+
+        if player1 == player2:
+            self.result_string = "Empate!"
+        elif (player1 == pedra and player2 == tesoura) or \
+             (player1 == papel and player2 == pedra) or \
+             (player1 == tesoura and player2 == papel):
+            self.result_string = "O Jogador 1 Venceu!!"
+        else:
+            self.result_string = "Jogador 2 Venceu!!"
+
+        return self.result_string    
+            
 teste = Exercicios()
-print(teste.exercise_eighteen("K", "C", 15))
+# print(teste.exercise_eighteen("K", "C", 15))
+print(teste.exercise_nineteen("pedra", "papel", "tesoura"))
